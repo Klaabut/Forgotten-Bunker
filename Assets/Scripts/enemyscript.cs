@@ -34,8 +34,8 @@ public class enemyscript : MonoBehaviour
             if (direction.sqrMagnitude <= Range)
             {
               float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);  
+            Quaternion rotation = Quaternion.AngleAxis(angle-90, Vector3.forward);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime); 
             }
             
             //Debug.Log(target.position.x);
